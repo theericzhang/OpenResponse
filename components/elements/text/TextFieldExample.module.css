@@ -1,0 +1,30 @@
+/* TextFieldExample.css */
+
+@font-face {
+    font-family: Monaco;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../../public/fonts/Monaco.ttf);
+}
+
+.textfield-wrapper {
+    width: 854px;
+    min-height: 173px;
+    border-radius: 22px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #2E2E2E;
+    padding: 0 24px;
+}
+
+.textfield-text {
+    font-family: Monaco;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 19px 0;
+    line-height: 38px;
+    -webkit-font-smoothing: antialiased;
+}

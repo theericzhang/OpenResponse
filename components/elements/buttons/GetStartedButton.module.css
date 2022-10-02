@@ -1,0 +1,28 @@
+/* GetStartedButton.css */
+
+@font-face {
+    font-family: Monaco;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../../public/fonts/Monaco.ttf);
+}
+
+.get-started-button-wrapper {
+    width: 271px;
+    height: 60px;
+    background-color: #FFC226;
+    border-radius: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 67px;
+}
+
+.get-started-button-label {
+    font-family: Monaco;
+    font-size: 24px;
+    color: #2E2E2E;
+    -webkit-font-smoothing: antialiased;
+}
