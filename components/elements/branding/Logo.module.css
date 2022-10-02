@@ -1,0 +1,15 @@
+/* Logo.css */
+
+.logo-openresponse-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.title {
+    margin: 0;
+    font-family: Georgia;
+    font-weight: 300;
+    font-size: 64px;
+    color: #E7E7E7;
+}

@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Logo from "../components/elements/branding/Logo";
 import TextFieldExample from "../components/elements/text/TextFieldExample";
 import GetStartedButton from "../components/elements/buttons/GetStartedButton";
 import styles from "../styles/Home.module.css";
@@ -20,20 +22,22 @@ export default function Home() {
             <main className={styles.main}>
                 <div className={styles["left-column"]}>
                     <div className={styles["intro-text-description"]}>
-                        <h1 className={styles.title}>
-                            Hey there! I'm OpenResponse.
-                        </h1>
+                        <Logo />
                         <h3 className={styles.subtitle}>I'm an AI built with OpenAI and NextJS. I'll read and respond to any prompt that you type out.</h3>
                         <p className={styles.description}>
                             An example prompt would look like this
                             {/* <code className={styles.code}>pages/index.js</code> */}
                         </p>
-                        <TextFieldExample text="What's so great about Brooklyn? What's so special about the pizza?" textColor="#FFC226"/>
+                        <TextFieldExample text="What's so great about Brooklyn? What's so special about the pizza?" 
+                                          textType='input'
+                        />
                         <p className={styles.description}>
                             I might say something like this in response
                             {/* <code className={styles.code}>pages/index.js</code> */}
                         </p>
-                        <TextFieldExample text="There are many things that make Brooklyn great, but one of the most popular reasons is the pizza. Brooklyn is home to some of the best pizza places in the country, and the pizza here is truly special. The dough is thin and crispy, the sauce is flavorful, and the toppings are plentiful. If you're looking for a truly unique and delicious pizza experience, Brooklyn is the place to be." textColor="#B5B4FF"/>
+                        <TextFieldExample text="There are many things that make Brooklyn great, but one of the most popular reasons is the pizza. Brooklyn is home to some of the best pizza places in the country, and the pizza here is truly special. The dough is thin and crispy, the sauce is flavorful, and the toppings are plentiful. If you're looking for a truly unique and delicious pizza experience, Brooklyn is the place to be." 
+                                          textType='response'
+                        />
                     </div>
                     <div className={styles["call-to-action-row"]}>
                         <p className={styles.description}>

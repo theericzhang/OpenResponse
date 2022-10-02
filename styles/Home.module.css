@@ -53,15 +53,6 @@
     max-width: 867px;
 }
 
-.title {
-    margin: 0;
-    font-family: Georgia;
-    font-weight: 300;
-    font-size: 64px;
-    color: #E7E7E7;
-}
-
-.title,
 .description {
     text-align: left;
 }
@@ -75,7 +66,7 @@
 
 .subtitle {
     margin: 0;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .description {
