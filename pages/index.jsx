@@ -69,7 +69,7 @@ export default function Home() {
                         </div>
                         <div className={styles["footer-text-column"]}>
                             <span className={styles["footer-logo-font"]}>
-                                OpenResponse <span className={styles["footer-notes"]}>was built by Eric Zhang @anericzhang</span>
+                                OpenResponse <span className={styles["footer-notes"]}>was built by Eric Zhang with OpenAI's API and NextJS + React. </span>
                             </span>
                         </div>
                     </div>

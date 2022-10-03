@@ -1,0 +1,33 @@
+/* SubmitPromptButton.css */
+
+.submit-prompt-button {
+    width: 47px;
+    height: 32px;
+    background-color: #FFC226;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+.submit-prompt-button:hover {
+    cursor: pointer;
+}
+
+.submit-prompt-button:disabled {
+    background-color: #535353;
+    /* change color */
+    cursor: not-allowed;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+.submit-prompt-button-arrow {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+    fill: #2E2E2E;
+}

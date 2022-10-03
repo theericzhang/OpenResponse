@@ -30,6 +30,11 @@
     font-size: 24px;
     color: #FFC226;
     -webkit-font-smoothing: antialiased;
+    overflow: scroll;
+}
+
+.user-input::placeholder {
+    color: #535353;
 }
 
 .user-input:focus {
