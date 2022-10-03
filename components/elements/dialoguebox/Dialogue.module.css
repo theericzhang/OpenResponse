@@ -1,0 +1,37 @@
+/* Dialogue.css */
+
+.dialogue-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    min-height: 645px;
+    background-color: #2E2E2E;
+    border-radius: 22px;
+    margin-top: 63px;
+}
+
+.user-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 65px;
+    align-items: center;
+}
+
+.user-input-arrow-right {
+    margin: 0 13px;
+}
+
+.user-input {
+    min-height: 37px;
+    border: none;
+    background-color: #2E2E2E;
+    width: 1150px;
+    font-family: Monaco;
+    font-size: 24px;
+    color: #FFC226;
+    -webkit-font-smoothing: antialiased;
+}
+
+.user-input:focus {
+    outline: none;
+}
