@@ -12,6 +12,7 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
     
     const [ isPromptViewOpen, setIsPromptViewOpen ] = useState(false);
+    console.log('loading');
     
     return (
         <div className={styles.container}>
