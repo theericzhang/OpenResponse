@@ -17,7 +17,10 @@
     justify-content: center;
     align-items: center;
     column-gap: 15px;
-    margin-top: 67px;
+    margin-top: 1.5em;
+    border: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
 }
 
 .get-started-button-label {
@@ -25,4 +28,20 @@
     font-size: 24px;
     color: #2E2E2E;
     -webkit-font-smoothing: antialiased;
+}
+
+.open-response-logo {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+}
+
+.get-started-button-wrapper:hover .open-response-logo {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    transform: scale(1.2);
+}
+
+.get-started-button-wrapper:hover {
+    background-color: #FFD568;
+    cursor: pointer;
 }

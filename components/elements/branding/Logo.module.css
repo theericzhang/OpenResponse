@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    justify-self: flex-start;
+    width: 1280px;
 }
 
 .title {
