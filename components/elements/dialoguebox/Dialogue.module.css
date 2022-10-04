@@ -17,6 +17,11 @@
     align-items: center;
 }
 
+.input-form {
+    display: flex;
+    flex-direction: row;
+}
+
 .user-input-arrow-right {
     margin: 0 13px;
 }
@@ -44,11 +49,16 @@
 .openresponse-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .openresponse-input-logo {
     margin: 0 13px;
+}
+
+.response-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
 }
 
 .openresponse-text {
