@@ -4,16 +4,16 @@
     display: block;
     width: 60px;
     height: 39px;
-    /* margin: 0 1rem; */
+    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
 .circle-scaling {
     display: block;
-    height: 10px;
-    width: 10px;
+    height: 8px;
+    width: 8px;
     border-radius: 50%;
     background-color: #535353;
     margin: 3px;
