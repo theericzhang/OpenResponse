@@ -13,13 +13,14 @@
 .user-input-wrapper {
     display: flex;
     flex-direction: row;
-    min-height: 65px;
+    padding: 13px 0;
     align-items: center;
 }
 
 .input-form {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .user-input-arrow-right {
@@ -35,6 +36,7 @@
     font-size: 24px;
     color: #FFC226;
     -webkit-font-smoothing: antialiased;
+    outline: none;
     overflow: scroll;
 }
 
@@ -42,13 +44,17 @@
     color: #535353;
 }
 
-.user-input:focus {
-    outline: none;
+#dialogue-divider-active{
+    border: 1px solid #FFC226;
+    border-bottom: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
 }
 
 .openresponse-wrapper {
     display: flex;
     flex-direction: row;
+    padding: 13px 0;
 }
 
 .openresponse-input-logo {
@@ -59,6 +65,15 @@
     display: flex;
     flex-direction: column;
     padding-top: 3px;
+}
+
+.dialogue-divider {
+    width: 100%;
+    border: 1px solid #535353;
+    border-bottom: none;
+    margin: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
 }
 
 .openresponse-text {
