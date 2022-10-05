@@ -11,6 +11,7 @@ export default function Dialogue () {
     const [ userInput, setUserInput ] = useState('');
     const [ response, setResponse ] = useState('');
     const [ isFetchingResponse, setIsFetchingResponse ] = useState(false);
+    const [ dialogueHistory, setDialogueHistory ] = useState([]);
 
     // handling the returned data
     // all responses appear to start with a \n\n header, so split to a regex and ignore the first two instances
@@ -49,16 +50,25 @@ export default function Dialogue () {
         e.preventDefault();
         setIsFetchingResponse(true);
         const response = await fetch("/api/server", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt: userInput }),
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ prompt: userInput }),
         });
         if (response.ok) {
             const data = await response.json();
             setIsFetchingResponse(false);
             setResponse(data.result);
+            setDialogueHistory(prevDialogueHistory => [ 
+                                                        ...prevDialogueHistory, 
+                                                        { 
+                                                            userInput: userInput,
+                                                            response: data.result
+                                                        }
+                                                      ]
+            );
+            console.log(dialogueHistory);
         }
     }
     
