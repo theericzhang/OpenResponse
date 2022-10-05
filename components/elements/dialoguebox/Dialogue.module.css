@@ -31,7 +31,7 @@
     min-height: 37px;
     border: none;
     background-color: #2E2E2E;
-    width: 94%;
+    width: 91%;
     font-family: Monaco;
     font-size: 24px;
     color: #FFC226;
@@ -44,6 +44,14 @@
 
 .user-input::placeholder {
     color: #535353;
+}
+
+.user-input-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    column-gap: 8px;
 }
 
 #dialogue-divider-active{

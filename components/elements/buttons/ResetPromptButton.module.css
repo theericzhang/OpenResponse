@@ -1,0 +1,13 @@
+/* ResetPromptButton */
+
+.reset-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: unset;
+    color: unset;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

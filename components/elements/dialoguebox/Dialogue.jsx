@@ -4,6 +4,7 @@ import { useState } from "react";
 import style from './Dialogue.module.css';
 
 import SubmitPromptButton from "../buttons/SubmitPromptButton";
+import ResetPromptButton from "../buttons/ResetPromptButton";
 import TypingPlaceholder from "./TypingPlaceholder";
 
 export default function Dialogue () {
@@ -102,9 +103,12 @@ export default function Dialogue () {
                               autoComplete="off"
                               onKeyPress={e => enterHandler(e)}
                     />
-                    <SubmitPromptButton isEnabled={!!userInput}
-                                        inputSubmissionHandler={inputSubmissionHandler}
-                    />
+                    <div className={style["user-input-button-group"]}>
+                        <ResetPromptButton setUserInput={setUserInput} />
+                        <SubmitPromptButton isEnabled={!!userInput}
+                                            inputSubmissionHandler={inputSubmissionHandler}
+                        />
+                    </div>
                 </form>
             </div>
             {/* <hr className={style["dialogue-divider"]} 
