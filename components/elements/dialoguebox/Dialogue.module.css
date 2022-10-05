@@ -13,14 +13,14 @@
 .user-input-wrapper {
     display: flex;
     flex-direction: row;
-    padding: 13px 0;
-    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 5.5px;
 }
 
 .input-form {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
 }
 
 .user-input-arrow-right {
@@ -31,13 +31,15 @@
     min-height: 37px;
     border: none;
     background-color: #2E2E2E;
-    width: 1150px;
+    width: 94%;
     font-family: Monaco;
     font-size: 24px;
     color: #FFC226;
     -webkit-font-smoothing: antialiased;
     outline: none;
     overflow: scroll;
+    resize: none;
+    margin-right: 10px;
 }
 
 .user-input::placeholder {
@@ -54,11 +56,24 @@
 .openresponse-wrapper {
     display: flex;
     flex-direction: row;
-    padding: 13px 0;
+    padding-top: 5.5px;
+    padding-bottom: 13px;
 }
 
 .openresponse-input-logo {
     margin: 0 13px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    fill: #B5B4FF;
+}
+
+#idle {
+    width: 33px;
+    height: 33px;
+    margin: 3px 16px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    fill: #535353;
 }
 
 .response-text-wrapper {

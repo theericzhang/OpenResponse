@@ -12,8 +12,8 @@
 
 .circle-scaling {
     display: block;
-    height: 8px;
-    width: 8px;
+    height: 6px;
+    width: 6px;
     border-radius: 50%;
     background-color: #535353;
     margin: 3px;
@@ -43,7 +43,7 @@
     }
 
     50% {
-        transform: scale(1.19);
+        transform: scale(1.5);
     }
 
     100% {
