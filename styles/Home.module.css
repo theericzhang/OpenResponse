@@ -191,6 +191,7 @@
 .footer-notes {
     font-family: Monaco;
     font-size: 16px;
+    font-style: normal;
     color: #E7E7E7;
     -webkit-font-smoothing: antialiased;
     margin: 0;
