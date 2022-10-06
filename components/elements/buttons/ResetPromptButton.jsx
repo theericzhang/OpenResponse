@@ -1,11 +1,14 @@
 import React from "react";
 import style from './ResetPromptButton.module.css';
 
-export default function ResetPromptButton({ setUserInput }) {
+export default function ResetPromptButton({ setUserInput, setResponse }) {
     return (
         <div className={style["reset-button-wrapper"]}>
             <button className={style["reset-button"]}
-                    onClick={() => setUserInput('')}
+                    onClick={() => {
+                        setUserInput('');
+                        setResponse('');
+                    }}
                     type="reset"
             >
                 <svg className={style["reset-button-icon"]} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

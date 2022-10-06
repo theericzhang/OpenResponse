@@ -111,7 +111,9 @@ export default function Dialogue () {
                               onKeyPress={e => enterHandler(e)}
                     />
                     <div className={style["user-input-button-group"]}>
-                        <ResetPromptButton setUserInput={setUserInput} />
+                        <ResetPromptButton setUserInput={setUserInput} 
+                                           setResponse={setResponse}
+                        />
                         <SubmitPromptButton isEnabled={!!userInput}
                                             inputSubmissionHandler={inputSubmissionHandler}
                         />
