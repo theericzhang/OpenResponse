@@ -1,10 +1,11 @@
 import React from "react";
 import styles from './GetStartedButton.module.css';
 
-export default function GetStartedButton ({ setIsPromptViewOpen }) {
+export default function GetStartedButton ({ setIsPromptViewOpen, setIsComponentUnmounting }) {
     
     function togglePromptView () {
-        setIsPromptViewOpen(true);
+        setIsComponentUnmounting(true);
+        setTimeout(() => setIsPromptViewOpen(true), 250);
     }
 
     return (
