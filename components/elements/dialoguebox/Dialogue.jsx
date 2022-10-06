@@ -47,7 +47,7 @@ export default function Dialogue () {
     // achievable by setting a custom id target, #loaded
     useEffect(() => {
         setIsLoaded(true);
-    },[]);
+    }, []);
 
     function userInputChangeHandler(e) {
         setUserInput(e.target.value);
