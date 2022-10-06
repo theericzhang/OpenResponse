@@ -14,6 +14,7 @@ export default function Dialogue () {
     const [ isFetchingResponse, setIsFetchingResponse ] = useState(false);
     const [ dialogueHistory, setDialogueHistory ] = useState([]);
     const [ isUserTyping, setIsUserTyping ] = useState(false);
+    const [ isLoaded, setIsLoaded ] = useState(false);
 
     // handling the returned data
     // all responses appear to start with a \n\n header, so split to a regex and ignore the first two instances
@@ -41,6 +42,12 @@ export default function Dialogue () {
             setIsUserTyping(false);
         }
     }, [userInput]);
+
+    // animation mount. once component mounts, change the transform rotateX value to 0 degress.
+    // achievable by setting a custom id target, #loaded
+    useEffect(() => {
+        setIsLoaded(true);
+    },[]);
 
     function userInputChangeHandler(e) {
         setUserInput(e.target.value);
@@ -84,7 +91,7 @@ export default function Dialogue () {
     }
     
     return (
-        <div className={style["dialogue-wrapper"]}>
+        <div className={style["dialogue-wrapper"]} id={isLoaded ? style["dialogue-wrapper-loaded"] : ''}>
             <div className={style["user-input-wrapper"]}>
                 <svg className={style["user-input-arrow-right"]} width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.4795 26.9587L20.922 19.5L13.4795 12.0412L15.7707 9.75L25.5207 19.5L15.7707 29.25L13.4795 26.9587Z" fill="#FFC226"/>

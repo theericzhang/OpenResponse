@@ -8,6 +8,20 @@
     background-color: #2E2E2E;
     border-radius: 22px;
     margin-top: 63px;
+    transform: rotateX(-1deg) scale(0.95);
+    transform-style: preserve-3d;
+    transform-origin: top;
+    opacity: 0;
+    transition-delay: 10s;
+    transition: ease;
+    transition-duration: 0.25s;
+}
+
+#dialogue-wrapper-loaded {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+    transition: ease;
+    transition-duration: 0.25s;
 }
 
 .user-input-wrapper {
