@@ -1,0 +1,124 @@
+/* Dialogue.css */
+
+.dialogue-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    min-height: 645px;
+    background-color: #2E2E2E;
+    border-radius: 22px;
+    margin-top: 63px;
+    transform: rotateX(-1deg) scale(0.95);
+    transform-style: preserve-3d;
+    transform-origin: top;
+    opacity: 0;
+    transition-delay: 10s;
+    transition: ease;
+    transition-duration: 0.25s;
+}
+
+#dialogue-wrapper-loaded {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+    transition: ease;
+    transition-duration: 0.25s;
+}
+
+.user-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 13px;
+    padding-bottom: 5.5px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.user-input-arrow-right {
+    margin: 0 13px;
+}
+
+.user-input {
+    min-height: 37px;
+    border: none;
+    background-color: #2E2E2E;
+    width: 91%;
+    font-family: Monaco;
+    font-size: 24px;
+    color: #FFC226;
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    overflow: scroll;
+    resize: none;
+    margin-right: 10px;
+}
+
+.user-input::placeholder {
+    color: #535353;
+}
+
+.user-input-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    column-gap: 8px;
+}
+
+#dialogue-divider-active{
+    border: 1px solid #FFC226;
+    border-bottom: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+.openresponse-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5.5px;
+    padding-bottom: 13px;
+}
+
+.openresponse-input-logo {
+    margin: 0 13px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    fill: #B5B4FF;
+}
+
+#idle {
+    width: 33px;
+    height: 33px;
+    margin: 3px 16px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    fill: #535353;
+}
+
+.response-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+}
+
+.dialogue-divider {
+    width: 100%;
+    border: 1px solid #535353;
+    border-bottom: none;
+    margin: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+.openresponse-text {
+    margin: 0;
+    min-height: 37px;
+    width: 1150px;
+    font-family: Monaco;
+    font-size: 24px;
+    color: #B5B4FF;
+    -webkit-font-smoothing: antialiased;
+}

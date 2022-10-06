@@ -1,5 +1,5 @@
 {
-  "name": "twitter-ai-bot",
+  "name": "openresponse",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "next": "12.3.1",
+    "openai": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

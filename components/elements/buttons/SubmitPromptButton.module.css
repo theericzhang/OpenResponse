@@ -1,0 +1,76 @@
+/* SubmitPromptButton.css */
+
+.submit-prompt-button-wrapper {
+    position: relative;
+    perspective: 100px;
+}
+
+.submit-prompt-button {
+    width: 47px;
+    height: 32px;
+    background-color: #FFC226;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+    position: relative;
+}
+
+.submit-prompt-button-hover-suggestion {
+    width: fit-content;
+    height: 30px;
+    background-color: #656565;
+    padding: 0 6px;
+    position: absolute;
+    top: -41px;
+    left: -11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transform: rotateX(15deg) scale(0.95);
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    opacity: 0;
+    transition: ease;
+    transition-duration: 0.25s;
+}
+
+.submit-prompt-button:hover + .submit-prompt-button-hover-suggestion {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    transition: ease;
+    transition-duration: 0.25s;
+}
+
+.submit-prompt-button-hover-suggestion-text {
+    font-family: Monaco;
+    font-weight: 300;
+    font-size: 16px;
+    color: #E6E6E6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.submit-prompt-button:hover {
+    cursor: pointer;
+}
+
+.submit-prompt-button:disabled {
+    background-color: #535353;
+    /* change color */
+    cursor: not-allowed;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+.submit-prompt-button-arrow {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+    fill: #2E2E2E;
+}

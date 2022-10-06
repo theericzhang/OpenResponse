@@ -33,6 +33,20 @@
     src: url(../public/fonts/Monaco.ttf);
 }
 
+@font-face {
+    font-family: GT-DS;
+    font-style: italic;
+    font-weight: 300;
+    src: url(../public/fonts/GT-SD-lt-it.otf)
+}
+
+@font-face {
+    font-family: GT-DS;
+    font-style: italic;
+    font-weight: 400;
+    src: url(../public/fonts/GT-SD-md-it.otf)
+}
+
 .container {
     /* padding: 0 146px; */
 }
@@ -43,140 +57,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.left-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.intro-text-description-wrapper {
-    display: flex;
-    max-width: 1280px;
-}
-
-.intro-text-description {
-    max-width: 867px;
-}
-
-.subtitle, .description {
-    font-family: Monaco;
-    font-size: 24px;
-    font-weight: 200;
-    -webkit-font-smoothing: antialiased;
-}
-
-.subtitle {
-    margin: 0;
-    margin-top: 30px;
-}
-
-.description {
-    margin-top: 68px;
-    line-height: 1.5;
-    font-size: 1.5rem;
-    max-width: 876px;
-    text-align: left;
-}
-
-.description-call-to-action {
-    font-family: Monaco;
-    font-size: 24px;
-    font-weight: 200;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
-    font-size: 1.5rem;
-    max-width: 876px;
-    text-align: left;
-}
-
-.call-to-action-row {
-    display: flex;
-    flex-direction: row;
-    width: 1280px;
-    justify-content: space-between;
-    margin-top: 68px;
-}
-
-.right-column {
-    display: flex;
-    width: 545px;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.code {
-    background: #fafafa;
-    border-radius: 5px;
-    padding: 0.75rem;
-    font-size: 1.1rem;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.footer-main {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 410px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: fixed;
-    bottom: 0;
-}
-
-.footer-logo-column {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-}
-
-.footer-text-column {
-    display: flex;
-}
-
-.divider {
-    height: 337px;
-    width: 1px;
-    /* border-left: 1px solid rgb(169,169,169); */
-    background: rgb(169,169,169);
-    background: linear-gradient(180deg, rgba(169,169,169,0.01) 15%, rgba(169,169,169,1) 100%);
-}
-
-.footer-text {
-    padding: 0 30px;
-    width: 100%;
-    height: 231px;
-    display: flex;
-    flex-direction: row;
-}
-
-.footer-logo-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 5px;
-}
-
-.footer-logo-font {
-    font-family: Georgia;
-    font-size: 20px;
-    color: #E7E7E7;
-    -webkit-font-smoothing: antialiased;
-    margin-top: 4px;
-}
-
-.footer-notes {
-    font-family: Monaco;
-    font-size: 16px;
-    color: #E7E7E7;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    margin-left: 3px;
+    perspective: 100px;
 }
 
 @media (max-width: 600px) {

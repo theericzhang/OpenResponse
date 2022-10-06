@@ -3,15 +3,16 @@
 .logo-openresponse-wrapper {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 5px;
     justify-self: flex-start;
     width: 1280px;
 }
 
 .title {
     margin: 0;
-    font-family: Georgia;
+    font-family: GT-DS;
     font-weight: 300;
+    font-style: italic;
     font-size: 64px;
     color: #E7E7E7;
 }
