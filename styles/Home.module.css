@@ -60,6 +60,13 @@
     perspective: 100px;
 }
 
+@media (max-width: 1500px) {
+    .main {
+        align-items: flex-start;
+        padding: 0 110px;
+    }
+}
+
 @media (max-width: 600px) {
     
 }
