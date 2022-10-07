@@ -51,11 +51,12 @@
     /* padding: 0 146px; */
     display: flex;
     flex-direction: column;
+    background-color: #1c1c1c;
 }
 
 .main {
     margin-top: 98px;
-    min-height: calc(100vh - 98px);
+    /* min-height: calc(100vh - 98px); */
     display: flex;
     flex-direction: column;
     align-items: center;

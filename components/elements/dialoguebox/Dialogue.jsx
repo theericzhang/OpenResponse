@@ -16,6 +16,8 @@ export default function Dialogue () {
     const [ isUserTyping, setIsUserTyping ] = useState(false);
     const [ isLoaded, setIsLoaded ] = useState(false);
 
+    const [ isAutoTyperFinished, setIsAutoTyperFinished ] = useState(false);
+
     // handling the returned data
     // all responses appear to start with a \n\n header, so split to a regex and ignore the first two instances
     const responseParsed = response.split(/\r?\n/).map((line, index) => {
@@ -42,6 +44,27 @@ export default function Dialogue () {
             setIsUserTyping(false);
         }
     }, [userInput]);
+
+    // simulate first typing event - no explanation needed?
+    // first, initialize the search prompt we want answered.
+    // in order to loop through each character of the string, we need to manually iterate through the string using an index.
+    // If the index is less than or equal to the length of the prompt, then we setUserInput to a substring - from index 0 to indexChar.
+    // after that, increment indexChar.
+    // If indexChar exceeds the length of initialPrompt (meaning it would be accessing garbage data), we need to clear the interval to prevent infinite function calls.
+    useEffect(() => {
+        let initialPrompt = "Can you tell me about Artificial Intelligence in a few sentences?"
+        let indexChar = 0;
+        const typingInterval = setInterval(setInitialUserInputTextPerChar, 70);
+
+        function setInitialUserInputTextPerChar() {
+            if (indexChar <= initialPrompt.length) {
+                setUserInput(initialPrompt.slice(0, indexChar));
+                indexChar++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }
+    }, [])
 
     // animation mount. once component mounts, change the transform rotateX value to 0 degress.
     // achievable by setting a custom id target, #loaded
@@ -104,6 +127,7 @@ export default function Dialogue () {
                            autoComplete="off"
                     /> */}
                     <textarea type="text"
+                              value={userInput}
                               placeholder="Type your prompt here..."
                               className={style["user-input"]}
                               onChange={e => userInputChangeHandler(e)}

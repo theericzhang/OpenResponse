@@ -5,6 +5,9 @@
     justify-content: flex-start;
     align-self: center;
     width: 1280px;
+    position: fixed;
+    bottom: 0;
+    background-color: #1c1c1c;
 }
 
 .footer-wrapper {
@@ -36,11 +39,11 @@
 
 .footer-text {
     width: 100%;
-    height: 150px;
     display: flex;
     flex-direction: row;
     column-gap: 3px;
     margin: 5px 0;
+    margin-bottom: 15px;
 }
 
 .footer-logo-wrapper {
