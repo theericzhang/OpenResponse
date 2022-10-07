@@ -2,17 +2,17 @@
 
 .footer-main {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-self: center;
+    width: 1280px;
 }
 
 .footer-wrapper {
     display: flex;
-    flex-direction: row;
-    width: 410px;
+    flex-direction: column;
+    width: 610px;
     justify-content: flex-end;
-    align-items: flex-end;
-    position: fixed;
-    bottom: 0;
+    /* padding: 0 30px; */
 }
 
 .footer-logo-column {
@@ -23,23 +23,24 @@
 
 .footer-text-column {
     display: flex;
+    width: 400px;
 }
 
 .divider {
-    height: 250px;
-    width: 1px;
+    width: 610px;
+    height: 1px;
     /* border-left: 1px solid rgb(169,169,169); */
     background: rgb(169,169,169);
-    background: linear-gradient(180deg, rgba(169,169,169,0.01) 15%, rgba(169,169,169,1) 100%);
+    background: linear-gradient(-90deg, rgba(169,169,169,0.01) 15%, rgba(169,169,169,1) 100%);
 }
 
 .footer-text {
-    padding: 0 30px;
     width: 100%;
     height: 150px;
     display: flex;
     flex-direction: row;
     column-gap: 3px;
+    margin: 5px 0;
 }
 
 .footer-logo-wrapper {
