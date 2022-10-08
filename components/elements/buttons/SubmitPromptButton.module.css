@@ -74,3 +74,9 @@
     transition-duration: 0.5s;
     fill: #2E2E2E;
 }
+
+@media (max-width: 600px) {
+    .submit-prompt-button-hover-suggestion {
+        display: none;
+    }
+}

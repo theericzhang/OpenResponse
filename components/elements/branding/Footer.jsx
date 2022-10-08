@@ -24,14 +24,19 @@ export default function Footer() {
                             />
                         </svg>
                     </div>
-                    <div className={style["footer-text-column"]}>
-                        <span className={style["footer-logo-font"]}>
-                            OpenResponse{" "}
-                            <span className={style["footer-notes"]}>
-                                was built by Eric Zhang with OpenAI's API and
-                                NextJS + React.{" "}
+                    <div className={style["footer-text-column-wrapper"]}>
+                        <div className={style["footer-text-column"]}>
+                            <span className={style["footer-logo-font"]}>
+                                OpenResponse
+                                <span className={style["footer-notes"]} id={style["footer-notes-first"]}>
+                                    was built by Eric Zhang with OpenAI's API and
+                                    NextJS + React.
+                                </span>
                             </span>
-                        </span>
+                        </div>
+                        <div className={style["footer-text-column"]} id={style.side}>
+                            <span className={style["footer-notes"]}>GPT-3 was trained with data up to 2020. It is not intended to be used to query current events, but rather as a Natural Language Processor.</span>
+                        </div>
                     </div>
                 </div>
             </div>

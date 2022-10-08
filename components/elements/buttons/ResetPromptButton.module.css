@@ -78,3 +78,18 @@
     transition-duration: 0.5s;
 }
 
+@media (max-width: 600px) {
+    .reset-button {
+        padding: 6px;
+    }
+
+    .reset-button-hover-suggestion {
+        display: none;
+    }
+
+    .reset-button:hover > .reset-button-icon {
+        transform: rotate(0deg) scale(1.3);
+        transition-duration: 0s;
+    }
+}
+
