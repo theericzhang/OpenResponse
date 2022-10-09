@@ -45,3 +45,9 @@
     background-color: #FFD568;
     cursor: pointer;
 }
+
+@media (max-width: 1430px) {
+    .get-started-button-wrapper {
+        align-self: flex-end;
+    }
+}

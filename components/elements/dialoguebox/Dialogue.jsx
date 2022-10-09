@@ -15,6 +15,10 @@ export default function Dialogue () {
     const [ dialogueHistory, setDialogueHistory ] = useState([]);
     const [ isUserTyping, setIsUserTyping ] = useState(false);
     const [ isLoaded, setIsLoaded ] = useState(false);
+    
+    let dialogueLoadedTimeoutOffset = 300;
+
+    const [ isAutoTyperFinished, setIsAutoTyperFinished ] = useState(false);
 
     // handling the returned data
     // all responses appear to start with a \n\n header, so split to a regex and ignore the first two instances
@@ -43,10 +47,33 @@ export default function Dialogue () {
         }
     }, [userInput]);
 
+    // simulate first typing event - no explanation needed?
+    // first, initialize the search prompt we want answered.
+    // in order to loop through each character of the string, we need to manually iterate through the string using an index.
+    // If the index is less than or equal to the length of the prompt, then we setUserInput to a substring - from index 0 to indexChar.
+    // after that, increment indexChar.
+    // If indexChar exceeds the length of initialPrompt (meaning it would be accessing garbage data), we need to clear the interval to prevent infinite function calls.
+    useEffect(() => {
+        let initialPrompt = "How do you discern between right and wrong?"
+        let indexChar = 0;
+        const typingInterval = setInterval(setInitialUserInputTextPerChar, 70);
+        
+        function setInitialUserInputTextPerChar() {
+            if (indexChar <= initialPrompt.length) {
+                setUserInput(initialPrompt.slice(0, indexChar));
+                indexChar++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }
+    }, []);
+
     // animation mount. once component mounts, change the transform rotateX value to 0 degress.
     // achievable by setting a custom id target, #loaded
     useEffect(() => {
-        setIsLoaded(true);
+        setTimeout(() => {
+            setIsLoaded(true);
+        }, dialogueLoadedTimeoutOffset);
     }, []);
 
     function userInputChangeHandler(e) {
@@ -97,13 +124,8 @@ export default function Dialogue () {
                     <path d="M13.4795 26.9587L20.922 19.5L13.4795 12.0412L15.7707 9.75L25.5207 19.5L15.7707 29.25L13.4795 26.9587Z" fill="#FFC226"/>
                 </svg>
                 <form onSubmit={(e) => inputSubmissionHandler(e)} className={style["input-form"]}>
-                    {/* <input type="text"
-                           placeholder="Type your prompt here..."
-                           className={style["user-input"]}
-                           onChange={e => userInputChangeHandler(e)}
-                           autoComplete="off"
-                    /> */}
                     <textarea type="text"
+                              value={userInput}
                               placeholder="Type your prompt here..."
                               className={style["user-input"]}
                               onChange={e => userInputChangeHandler(e)}
@@ -120,9 +142,6 @@ export default function Dialogue () {
                     </div>
                 </form>
             </div>
-            {/* <hr className={style["dialogue-divider"]} 
-                id={!!userInput ? style["dialogue-divider-active"] : ''}
-            /> */}
             <div className={style["openresponse-wrapper"]}>
                 <svg className={style["openresponse-input-logo"]} 
                      // if the AI has already responded, set the logo to the active state

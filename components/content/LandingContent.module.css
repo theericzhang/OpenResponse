@@ -12,6 +12,7 @@
     flex-direction: column;
     transform-style: preserve-3d;
     transform-origin: top;
+    row-gap: 68px;
 }
 
 .intro-text-description-wrapper {
@@ -59,5 +60,20 @@
     flex-direction: row;
     width: 1280px;
     justify-content: space-between;
-    margin-top: 68px;
+}
+
+@media (max-width: 1500px) {
+    .call-to-action-row {
+        width: 100%;
+    }
+
+    .left-column {
+        width: 97%;
+    }
+}
+@media (max-width: 1430px) {
+    .call-to-action-row {
+        flex-direction: column;
+        width: 856px;
+    }
 }

@@ -50,3 +50,9 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 600px) {
+    .typing {
+        height: 25px;
+    }
+}

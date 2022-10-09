@@ -27,8 +27,9 @@ export default function Home() {
 
             <main className={styles.main}>
                 <Logo />
-                {!isPromptViewOpen && <LandingContent isPromptViewOpen={isPromptViewOpen} setIsPromptViewOpen={setIsPromptViewOpen}/>}
-                {isPromptViewOpen && <Dialogue />}
+                {/* {!isPromptViewOpen && <LandingContent isPromptViewOpen={isPromptViewOpen} setIsPromptViewOpen={setIsPromptViewOpen}/>}
+                {isPromptViewOpen && <Dialogue />} */}
+                <Dialogue />
             </main>
             <Footer />
         </div>
