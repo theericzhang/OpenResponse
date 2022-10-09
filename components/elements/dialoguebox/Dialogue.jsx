@@ -52,7 +52,7 @@ export default function Dialogue () {
     // after that, increment indexChar.
     // If indexChar exceeds the length of initialPrompt (meaning it would be accessing garbage data), we need to clear the interval to prevent infinite function calls.
     useEffect(() => {
-        let initialPrompt = "How would you describe the feeling of love to a baby?"
+        let initialPrompt = "How would you describe the feeling of love to a toddler?"
         let indexChar = 0;
         const typingInterval = setInterval(setInitialUserInputTextPerChar, 70);
 
@@ -121,12 +121,6 @@ export default function Dialogue () {
                     <path d="M13.4795 26.9587L20.922 19.5L13.4795 12.0412L15.7707 9.75L25.5207 19.5L15.7707 29.25L13.4795 26.9587Z" fill="#FFC226"/>
                 </svg>
                 <form onSubmit={(e) => inputSubmissionHandler(e)} className={style["input-form"]}>
-                    {/* <input type="text"
-                           placeholder="Type your prompt here..."
-                           className={style["user-input"]}
-                           onChange={e => userInputChangeHandler(e)}
-                           autoComplete="off"
-                    /> */}
                     <textarea type="text"
                               value={userInput}
                               placeholder="Type your prompt here..."
@@ -145,9 +139,6 @@ export default function Dialogue () {
                     </div>
                 </form>
             </div>
-            {/* <hr className={style["dialogue-divider"]} 
-                id={!!userInput ? style["dialogue-divider-active"] : ''}
-            /> */}
             <div className={style["openresponse-wrapper"]}>
                 <svg className={style["openresponse-input-logo"]} 
                      // if the AI has already responded, set the logo to the active state
