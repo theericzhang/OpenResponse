@@ -179,10 +179,11 @@
 
     .response-text-wrapper {
         padding: 0;
+        width: 100%;
     }
 
     .openresponse-text {
         font-size: 16px;
-        max-width: 307px;
+        max-width: 97%;
     }
 }

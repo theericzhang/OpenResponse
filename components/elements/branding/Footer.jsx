@@ -10,6 +10,7 @@ export default function Footer() {
                 <div className={style["footer-text"]}>
                     <div className={style["footer-logo-column"]}>
                         <svg
+                            className={style["footer-logo"]}
                             width="32"
                             height="32"
                             viewBox="0 0 32 32"
@@ -30,7 +31,7 @@ export default function Footer() {
                                 OpenResponse
                                 <span className={style["footer-notes"]} id={style["footer-notes-first"]}>
                                     was built by Eric Zhang with OpenAI's API and
-                                    NextJS + React.
+                                    NextJS + React. This application does not collect or store any data. You can find repository <a href="https://github.com/theericzhang/OpenResponse" className={style["footer-link"]} target="blank">here</a>.
                                 </span>
                             </span>
                         </div>

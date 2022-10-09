@@ -52,7 +52,7 @@ export default function Dialogue () {
     // after that, increment indexChar.
     // If indexChar exceeds the length of initialPrompt (meaning it would be accessing garbage data), we need to clear the interval to prevent infinite function calls.
     useEffect(() => {
-        let initialPrompt = "What are your thoughts on AI?"
+        let initialPrompt = "How would you describe the feeling of love to a baby?"
         let indexChar = 0;
         const typingInterval = setInterval(setInitialUserInputTextPerChar, 70);
 
