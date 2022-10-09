@@ -15,6 +15,8 @@ export default function Dialogue () {
     const [ dialogueHistory, setDialogueHistory ] = useState([]);
     const [ isUserTyping, setIsUserTyping ] = useState(false);
     const [ isLoaded, setIsLoaded ] = useState(false);
+    
+    let dialogueLoadedTimeoutOffset = 300;
 
     const [ isAutoTyperFinished, setIsAutoTyperFinished ] = useState(false);
 
@@ -52,25 +54,26 @@ export default function Dialogue () {
     // after that, increment indexChar.
     // If indexChar exceeds the length of initialPrompt (meaning it would be accessing garbage data), we need to clear the interval to prevent infinite function calls.
     useEffect(() => {
-        let initialPrompt = "How would you describe the feeling of love to a toddler?"
+        let initialPrompt = "How do you discern between right and wrong?"
         let indexChar = 0;
         const typingInterval = setInterval(setInitialUserInputTextPerChar, 70);
-
+        
         function setInitialUserInputTextPerChar() {
             if (indexChar <= initialPrompt.length) {
                 setUserInput(initialPrompt.slice(0, indexChar));
                 indexChar++;
             } else {
                 clearInterval(typingInterval);
-
             }
         }
-    }, [])
+    }, []);
 
     // animation mount. once component mounts, change the transform rotateX value to 0 degress.
     // achievable by setting a custom id target, #loaded
     useEffect(() => {
-        setIsLoaded(true);
+        setTimeout(() => {
+            setIsLoaded(true);
+        }, dialogueLoadedTimeoutOffset);
     }, []);
 
     function userInputChangeHandler(e) {

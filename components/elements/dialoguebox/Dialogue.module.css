@@ -12,7 +12,8 @@
     transform-style: preserve-3d;
     transform-origin: top;
     opacity: 0;
-    transition-delay: 10s;
+    transition-delay: 1s;
+    transition-property: opacity, transform;
     transition: ease;
     transition-duration: 0.25s;
 }
