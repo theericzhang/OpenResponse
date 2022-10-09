@@ -1,10 +1,10 @@
 # OpenResponse
 
-🧠💻 This project is a small prompt-completion application built with Open-AI's GPT-3 (DaVinci) and Next.js. Users can enter prompts of any complexity and expect a response in text form. 
+🧠💻 This project is a small prompt-completion application built with Open-AI's GPT-3 (DaVinci) and Next.js. Users can enter prompts of any complexity and expect a response in text form. This application does not collect or store any data.
 
 ## Technology
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). React is used as the front-end library for creating UI components. Routing and node requests + API building are handled by Next.js
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). React is used as the front-end library for creating UI components. Routing and node requests + API building are handled by Next.js. 
 
 ## Installation
 

@@ -12,12 +12,13 @@ export default function Dialogue () {
     const [ userInput, setUserInput ] = useState('');
     const [ response, setResponse ] = useState('');
     const [ isFetchingResponse, setIsFetchingResponse ] = useState(false);
-    const [ dialogueHistory, setDialogueHistory ] = useState([]);
     const [ isUserTyping, setIsUserTyping ] = useState(false);
     const [ isLoaded, setIsLoaded ] = useState(false);
     
     let dialogueLoadedTimeoutOffset = 300;
-
+    
+    // dialogue history is a feature planned for future release - conversation-like UI is intended
+    // const [ dialogueHistory, setDialogueHistory ] = useState([]);
     const [ isAutoTyperFinished, setIsAutoTyperFinished ] = useState(false);
 
     // handling the returned data
@@ -105,15 +106,17 @@ export default function Dialogue () {
             const data = await response.json();
             setIsFetchingResponse(false);
             setResponse(data.result);
-            setDialogueHistory(prevDialogueHistory => [ 
-                                                        ...prevDialogueHistory, 
-                                                        { 
-                                                            userInput: userInput,
-                                                            response: data.result
-                                                        }
-                                                      ]
-            );
-            console.log(dialogueHistory);
+            
+            // dialogue history is a feature planned for future release - conversation-like UI is intended
+            // setDialogueHistory(prevDialogueHistory => [ 
+            //                                             ...prevDialogueHistory, 
+            //                                             { 
+            //                                                 userInput: userInput,
+            //                                                 response: data.result
+            //                                             }
+            //                                           ]
+            // );
+            // console.log(dialogueHistory);
         }
     }
     
