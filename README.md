@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OpenResponse
 
-## Getting Started
+🧠💻 This project is a small prompt-completion application built with Open-AI's GPT-3 (DaVinci) and Next.js. Users can enter prompts of any complexity and expect a response in text form. 
 
-First, run the development server:
+## Technology
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). React is used as the front-end library for creating UI components. Routing and node requests + API building are handled by Next.js
+
+## Installation
+
+### Getting Environment Variables for OpenAI's API
+
+OpenAI provides new users with $18.00 in free credits to be used in their first 3 months across their product lineup, including GPT-3 and Codex. [Visit their site](https://openai.com/api/) and sign up to acquire a key.
+
+This will be used to authenticate access to OpenAI's API.
+
+Change directory into the project's root and create a `.env` file.
+
+```bash
+cd OpenResponse
+touch .env
+```
+
+Add the key to your `.env` file.
+
+```
+OPENAI_API_KEY=YOUR_API_KEY_HERE
+```
+
+While in the project's root folder, install dependencies.
+
+```bash
+npm i
+```
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -11,24 +42,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
