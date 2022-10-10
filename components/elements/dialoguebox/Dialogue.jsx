@@ -55,7 +55,7 @@ export default function Dialogue () {
     // after that, increment indexChar.
     // If indexChar exceeds the length of initialPrompt (meaning it would be accessing garbage data), we need to clear the interval to prevent infinite function calls.
     useEffect(() => {
-        let initialPrompt = "How do you discern between right and wrong?"
+        let initialPrompt = "What does it mean to be conscious? Are you conscious?"
         let indexChar = 0;
         const typingInterval = setInterval(setInitialUserInputTextPerChar, 70);
         
@@ -106,7 +106,7 @@ export default function Dialogue () {
             const data = await response.json();
             setIsFetchingResponse(false);
             setResponse(data.result);
-            
+
             // dialogue history is a feature planned for future release - conversation-like UI is intended
             // setDialogueHistory(prevDialogueHistory => [ 
             //                                             ...prevDialogueHistory, 
