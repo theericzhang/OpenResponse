@@ -22,11 +22,11 @@ export default function Home() {
                     name="OpenResponse is an AI prompt-completion client"
                     content="OpenResponse, a GPT-3 Prompt-Completion client built with Next.js and OpenAI"
                 />
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://metatags.io/" />
-                <meta property="twitter:title" content="OpenResponse, a GPT-3 Prompt-Completion client" />
-                <meta property="twitter:description" content="" />
-                <meta property="twitter:image" content="https://raw.githubusercontent.com/theericzhang/OpenResponse/main/public/twittercardimage.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@anericzhang" />
+                <meta name="twitter:title" content="OpenResponse, a GPT-3 Prompt-Completion client" />
+                <meta name="twitter:description" content="" />
+                <meta name="twitter:image" content="https://raw.githubusercontent.com/theericzhang/OpenResponse/main/public/twittercardimage.png" />
                 <link rel="icon" href="/ico.svg" />
             </Head>
 
