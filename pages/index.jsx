@@ -30,7 +30,7 @@ export default function Home() {
                 <link rel="icon" href="/ico.svg" />
             </Head>
 
-            <main className={styles.main}>
+            <main className={styles.main} data-testid="main">
                 <Logo />
                 {/* {!isPromptViewOpen && <LandingContent isPromptViewOpen={isPromptViewOpen} setIsPromptViewOpen={setIsPromptViewOpen}/>}
                 {isPromptViewOpen && <Dialogue />} */}
