@@ -118,7 +118,7 @@
 .openresponse-text {
     margin: 0;
     min-height: 37px;
-    max-width: 95%;
+    width: 95%;
     font-family: Monaco;
     font-size: 24px;
     color: #B5B4FF;
