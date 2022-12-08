@@ -88,6 +88,7 @@
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-duration: 1s;
     fill: #B5B4FF;
+    min-width: 39px;
 }
 
 #idle {
@@ -169,6 +170,7 @@
         height: 21px;
         margin-left: 10px;
         margin-right: 4px;
+        min-width: unset;
     }
 
     #idle {
