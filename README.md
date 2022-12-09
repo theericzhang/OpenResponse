@@ -1,6 +1,6 @@
 # OpenResponse
 
-🧠💻 This project is a small prompt-completion application built with Open-AI's GPT-3 (DaVinci) and Next.js. Users can enter prompts of any complexity and expect a response in text form. This application does not collect or store any data.
+🧠 💻 This project is a small prompt-completion application built with Open-AI's GPT-3 (DaVinci) and Next.js. Users can enter prompts of any complexity and expect a response in text form. This application does not collect or store any data.
 
 ## Technology
 
