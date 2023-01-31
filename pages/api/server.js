@@ -34,7 +34,7 @@ export default async function (req, res) {
 
     const response = await completion.json();
     console.log(response);
-    // res.status(200).json({ result: completion?.choices[0].text });
+    res.status(200).json({ result: response.choices[0].text });
 }
 
 function generatePrompt(prompt) {
@@ -49,5 +49,8 @@ function generatePrompt(prompt) {
     // Animal: ${capitalizedAnimal}
     // Names:`;
 
-    return `${prompt}`;
+    // return `${prompt}`;
+    return {
+        'prompt': prompt,
+    };
 }
