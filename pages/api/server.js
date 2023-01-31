@@ -52,5 +52,6 @@ function generatePrompt(prompt) {
     // return `${prompt}`;
     return {
         'prompt': prompt,
+        'max_tokens': 1000,
     };
 }
