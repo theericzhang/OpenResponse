@@ -27,6 +27,13 @@ Add the key to your `.env` file.
 OPENAI_API_KEY=YOUR_API_KEY_HERE
 ```
 
+In the same `.env` file go to the next line and add the environment of the GPT-3 instance here. If you got your key from OpenAI's website, you can simply put the following - 
+
+```
+CURRENT_ENVIRONMENT=openai
+```
+
+
 While in the project's root folder, install dependencies.
 
 ```bash
