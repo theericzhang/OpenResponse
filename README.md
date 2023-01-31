@@ -10,6 +10,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Getting Environment Variables for OpenAI's API
 
+## ⚠️ NOTICE ⚠️
+As of Jan 30th 2023, I have moved the production deployment of this application a private GPT-3 instance. If you intend on cloning this project and configuring your instance with credits from OpenAI, PLEASE note to COPY CONTENTS from `OpenAI_server.js` and move it into `server.js`. 
+
 OpenAI provides new users with $18.00 in free credits to be used in their first 3 months across their product lineup, including GPT-3 and Codex. [Visit their site](https://openai.com/api/) and sign up to acquire a key.
 
 This will be used to authenticate access to OpenAI's API.
