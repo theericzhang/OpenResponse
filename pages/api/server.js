@@ -5,14 +5,14 @@ const apiKey = process.env.AZURE_OPENAI_KEY;
 const base_url = process.env.BASE_URL;
 const deploymentName = process.env.DEPLOYMENT_NAME;
 
-// WARNING - DO NOT EDIT BLOCKS CONTAINING isCurrentEnvironment UNLESS YOU HAVE DEPLOYED A GPT-3 INSTANCE ON AZURE.
-const isCurrentEnvironment = process.env.CURRENT_ENVIRONMENT === 'azure';
+// WARNING - DO NOT EDIT BLOCKS CONTAINING isCurrentEnvironmentAzure UNLESS YOU HAVE DEPLOYED A GPT-3 INSTANCE ON AZURE.
+const isCurrentEnvironmentAzure = process.env.CURRENT_ENVIRONMENT === 'azure';
 let url;
 let configuration;
 let openai;
-console.log(isCurrentEnvironment);
+console.log(isCurrentEnvironmentAzure);
 
-if (isCurrentEnvironment === 'azure') {
+if (isCurrentEnvironmentAzure === 'azure') {
     url = `${base_url}/openai/deployments/${deploymentName}/completions?api-version=2022-12-01`
 } else {
     configuration = new Configuration({
@@ -22,7 +22,7 @@ if (isCurrentEnvironment === 'azure') {
 }
 
 export default async function (req, res) {
-    if (isCurrentEnvironment === 'azure') {
+    if (isCurrentEnvironmentAzure === 'azure') {
         try {
             const response = await fetch(url, {
                 method: 'POST',
@@ -54,7 +54,7 @@ export default async function (req, res) {
 }
 
 function generatePrompt(prompt) {
-    if (isCurrentEnvironment === 'azure') {
+    if (isCurrentEnvironmentAzure === 'azure') {
         return {
             'prompt': prompt,
             'max_tokens': 1000,
