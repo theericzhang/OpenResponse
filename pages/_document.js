@@ -5,21 +5,21 @@ export default function Document() {
         <Html lang="en">
             <link
                 rel="preload"
-                href="/fonts/GT-SD-lt-it.otf"
+                href="/fonts/GT-SD-lt-it.woff2"
                 as="font"
                 type="font/otf"
                 crossOrigin=""
             />
             <link
                 rel="preload"
-                href="/fonts/GT-SD-md-it.otf"
+                href="/fonts/GT-SD-md-it.woff2"
                 as="font"
                 type="font/otf"
                 crossOrigin=""
             />
             <link
                 rel="preload"
-                href="/fonts/Monaco.ttf"
+                href="/fonts/Monaco.woff2"
                 as="font"
                 type="font/ttf"
                 crossOrigin=""

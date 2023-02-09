@@ -4,7 +4,7 @@
     font-family: Monaco;
     font-style: normal;
     font-weight: 400;
-    src: url(../../../public/fonts/Monaco.ttf);
+    src: url('/fonts/Monaco.woff2');
 }
 
 .textfield-wrapper {
