@@ -10,34 +10,6 @@ body {
 }
 
 @font-face {
-    font-family: Georgia;
-    font-style: normal;
-    font-weight: 400;
-    src: url(../public/fonts/Georgia.ttf);
-}
-
-@font-face {
-    font-family: Georgia;
-    font-style: italic;
-    font-weight: 400;
-    src: url(../public/fonts/Georgia\ Italic.ttf);
-}
-
-@font-face {
-    font-family: Georgia;
-    font-style: italic;
-    font-weight: 700;
-    src: url(../public/fonts/Georgia\ Bold\ Italic.ttf);
-}
-
-@font-face {
-    font-family: Georgia;
-    font-style: normal;
-    font-weight: 700;
-    src: url(../public/fonts/Georgia\ Bold.ttf);
-}
-
-@font-face {
     font-family: Monaco;
     font-style: normal;
     font-weight: 400;
