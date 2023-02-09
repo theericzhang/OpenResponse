@@ -24,18 +24,7 @@ export default function Document() {
                 type="font/woff2"
                 crossOrigin=""
             />
-            <Head>
-                <meta
-                    name="OpenResponse is an AI prompt-completion client"
-                    content="OpenResponse, a GPT-3 Prompt-Completion client built with Next.js and OpenAI"
-                />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@anericzhang" />
-                <meta name="twitter:title" content="OpenResponse, a GPT-3 Prompt-Completion client" />
-                <meta name="twitter:description" content="" />
-                <meta name="twitter:image" content="https://raw.githubusercontent.com/theericzhang/OpenResponse/main/public/twittercardimage.png" />
-                <link rel="icon" href="/ico.svg" />
-            </Head>
+            <Head />
             <body>
                 <Main />
                 <NextScript />
