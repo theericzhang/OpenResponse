@@ -10,6 +10,7 @@ export default function ResetPromptButton({ setUserInput, setResponse }) {
                         setResponse('');
                     }}
                     type="reset"
+                    aria-label="Reset text field"
                     data-testid="reset-button"
             >
                 <svg className={style["reset-button-icon"]} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +18,7 @@ export default function ResetPromptButton({ setUserInput, setResponse }) {
                 </svg>
             </button>
             <div className={style["reset-button-hover-suggestion"]}>
-                <h5 className={style["reset-button-hover-suggestion-text"]}>Reset</h5>
+                <span className={style["reset-button-hover-suggestion-text"]}>Reset</span>
             </div>
         </div>
     )
