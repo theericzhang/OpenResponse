@@ -6,7 +6,7 @@ const base_url = process.env.BASE_URL;
 const deploymentName = process.env.DEPLOYMENT_NAME;
 
 // WARNING - DO NOT EDIT BLOCKS CONTAINING isCurrentEnvironmentAzure UNLESS YOU HAVE DEPLOYED A GPT-3 INSTANCE ON AZURE.
-const isCurrentEnvironmentAzure = process.env.CURRENT_ENVIRONMENT === 'azure';
+const isCurrentEnvironmentAzure = process.env.CURRENT_ENVIRONMENT === "azure";
 console.log(isCurrentEnvironmentAzure);
 let url;
 let configuration;
@@ -15,7 +15,7 @@ console.log(isCurrentEnvironmentAzure);
 
 if (isCurrentEnvironmentAzure) {
     url = `${base_url}/openai/deployments/${deploymentName}/completions?api-version=2022-12-01`;
-    console.log('set url');
+    console.log("set url");
 } else {
     configuration = new Configuration({
         apiKey: process.env.OPENAI_API_KEY,
@@ -28,26 +28,28 @@ export default async function (req, res) {
         try {
             // console.log(req.body.prompt);
             const response = await fetch(url, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'api-key': apiKey
+                    "Content-Type": "application/json",
+                    "api-key": apiKey,
                 },
-                body: JSON.stringify(generatePrompt(req.body.prompt))
+                body: JSON.stringify(generatePrompt(req.body.prompt)),
             });
-            console.log('attempted fetch');
-        
+            console.log("attempted fetch");
+
             if (!response.ok) {
-                console.log(`HTTP Code: ${response.status} - ${response.statusText}`);
-                console.log('fetch failed');
+                console.log(
+                    `HTTP Code: ${response.status} - ${response.statusText}`
+                );
+                console.log("fetch failed");
             } else {
                 const completion = await response.json();
                 res.status(200).json({ result: completion.choices[0].text });
-                console.log('fetch succeeded');
+                console.log("fetch succeeded");
             }
-        } catch(e) {
+        } catch (e) {
             console.error(e);
-            console.log('fetch failed');
+            console.log("fetch failed");
         }
     } else {
         const completion = await openai.createCompletion({
@@ -64,9 +66,9 @@ function generatePrompt(prompt) {
     if (isCurrentEnvironmentAzure) {
         // console.log('attempting to set model?');
         return {
-            'model': 'text-davinci-003',
-            'prompt': prompt,
-            'max_tokens': 1000,
+            model: "text-davinci-003",
+            prompt: prompt,
+            max_tokens: 1000,
             // other options here
         };
     } else {
