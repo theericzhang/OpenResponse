@@ -5,6 +5,6 @@ export default function StatusIndicator() {
         "OpenResponse is experiencing degraded performance",
         "Active Incident",
     ];
-    return <div>test</div>;
+    return <div class={style["status-indicator-wrapper"]}>test</div>;
     // TODO: Create styles for this status indicator - move position to bottom right according to figma doc
 }
