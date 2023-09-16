@@ -1,3 +1,4 @@
+import style from "./StatusIndicator.module.css";
 export default function StatusIndicator() {
     let statuses = [
         "OpenResponse is operational",
@@ -5,4 +6,5 @@ export default function StatusIndicator() {
         "Active Incident",
     ];
     return <div>test</div>;
+    // TODO: Create styles for this status indicator - move position to bottom right according to figma doc
 }
