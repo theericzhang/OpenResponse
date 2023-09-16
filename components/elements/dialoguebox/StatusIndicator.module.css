@@ -3,3 +3,8 @@
     display: flex;
     align-self: flex-end;
 }
+
+.status-indicator-dot {
+    width: 100px;
+    height: 100px;
+}
