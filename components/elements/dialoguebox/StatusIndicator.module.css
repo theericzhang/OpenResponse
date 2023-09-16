@@ -1,4 +1,5 @@
 /* StatusIndicator.module.css */
 .status-indicator-wrapper {
-    background-color: red;
+    display: flex;
+    align-self: flex-end;
 }
