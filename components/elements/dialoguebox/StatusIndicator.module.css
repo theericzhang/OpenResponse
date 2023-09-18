@@ -6,6 +6,12 @@
     column-gap: 6px;
 }
 
+.status-indicator-text {
+    font-family: "Monaco";
+    color: #b1b1b1;
+    font-size: 12px;
+}
+
 .status-indicator-dot {
     width: 8px;
     height: 8px;

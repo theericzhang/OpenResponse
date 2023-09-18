@@ -12,6 +12,9 @@ export default function StatusIndicator() {
     };
     return (
         <div class={style["status-indicator-wrapper"]}>
+            <span className={style["status-indicator-text"]}>
+                {statuses[0]}
+            </span>
             <svg
                 width="8"
                 height="8"
