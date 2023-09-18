@@ -20,10 +20,9 @@ export default function StatusIndicator() {
                 xmlns="http://www.w3.org/2000/svg"
                 class={style["status-indicator-dot"]}
             >
-                <circle cx="4" cy="4" r="4" fill={fillColors["degraded"]} />
+                <circle cx="4" cy="4" r="4" fill={fillColors["operational"]} />
                 {/* TODO: watch fillColors and change colors accordingly to status of API. */}
             </svg>
-            test
         </div>
     );
     // TODO: Create styles for this status indicator - move position to bottom right according to figma doc

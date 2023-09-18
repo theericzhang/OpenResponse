@@ -2,9 +2,11 @@
 .status-indicator-wrapper {
     display: flex;
     align-self: flex-end;
+    align-items: center;
+    column-gap: 6px;
 }
 
 .status-indicator-dot {
-    width: 100px;
-    height: 100px;
+    width: 8px;
+    height: 8px;
 }
