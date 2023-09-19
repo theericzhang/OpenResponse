@@ -199,7 +199,12 @@ export default function Dialogue() {
                     ) : error ? (
                         error
                     ) : (
-                        responseParsed
+                        <div
+                            className={style["response-text-wrapper"]}
+                            data-testid="response-text-wrapper"
+                        >
+                            {responseParsed}
+                        </div>
                     )}
                 </div>
             </div>
