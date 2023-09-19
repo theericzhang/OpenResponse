@@ -14,6 +14,7 @@ export default function Dialogue() {
     const [isFetchingResponse, setIsFetchingResponse] = useState(false);
     const [isUserTyping, setIsUserTyping] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [error, setError] = useState("");
 
     let dialogueLoadedTimeoutOffset = 300;
 
@@ -120,6 +121,9 @@ export default function Dialogue() {
             //                                           ]
             // );
             // console.log(dialogueHistory);
+        } else {
+            const dataError = await response.json();
+            console.log(dataError.error);
         }
     }
 

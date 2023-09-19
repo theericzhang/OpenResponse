@@ -42,6 +42,11 @@ export default async function (req, res) {
                     `HTTP Code: ${response.status} - ${response.statusText}`
                 );
                 console.log("fetch failed");
+                res.status(500).json({
+                    error: `There was an error: ${response.statusText}`,
+                });
+
+                // If something went wrong, like an api call did not go through because of bad permissions, you will be redirected here
             } else {
                 const completion = await response.json();
                 res.status(200).json({ result: completion.choices[0].text });
@@ -49,7 +54,11 @@ export default async function (req, res) {
             }
         } catch (e) {
             console.error(e);
-            console.log("fetch failed");
+            console.log("fetch failed 2");
+            res.status(500).json({
+                error: "Could not contact GPT 3.5. Check to see if your internet connection is stable",
+            });
+            // If there was an issue where the outbound connection could not reach the server, then you will be redirected here.
         }
     } else {
         const completion = await openai.createCompletion({
