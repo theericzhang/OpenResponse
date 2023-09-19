@@ -123,7 +123,8 @@ export default function Dialogue() {
             // console.log(dialogueHistory);
         } else {
             const dataError = await response.json();
-            console.log(dataError.error);
+            setIsFetchingResponse(false);
+            setError(dataError.error);
         }
     }
 
@@ -195,13 +196,10 @@ export default function Dialogue() {
                     </svg>
                     {isFetchingResponse ? (
                         <TypingPlaceholder />
+                    ) : error ? (
+                        error
                     ) : (
-                        <div
-                            className={style["response-text-wrapper"]}
-                            data-testid="response-text-wrapper"
-                        >
-                            {responseParsed}
-                        </div>
+                        responseParsed
                     )}
                 </div>
             </div>
