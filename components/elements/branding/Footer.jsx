@@ -29,14 +29,36 @@ export default function Footer() {
                         <div className={style["footer-text-column"]}>
                             <span className={style["footer-logo-font"]}>
                                 OpenResponse
-                                <span className={style["footer-notes"]} id={style["footer-notes-first"]}>
-                                    was built by Eric Zhang with OpenAI's GPT-3 API and
-                                    NextJS + React. This application does not collect or store any data. You can find <a href="https://github.com/theericzhang/OpenResponse" className={style["footer-link"]} target="blank"> the repository here</a>.
+                                <span
+                                    className={style["footer-notes"]}
+                                    id={style["footer-notes-first"]}
+                                >
+                                    was built by Eric Zhang with OpenAI's
+                                    GPT-3.5 Turbo API and NextJS + React. This
+                                    application does not collect or store any
+                                    data. You can find{" "}
+                                    <a
+                                        href="https://github.com/theericzhang/OpenResponse"
+                                        className={style["footer-link"]}
+                                        target="blank"
+                                    >
+                                        {" "}
+                                        the repository here
+                                    </a>
+                                    .
                                 </span>
                             </span>
                         </div>
-                        <div className={style["footer-text-column"]} id={style.side}>
-                            <span className={style["footer-notes"]}>GPT-3 was trained with data up to 2021. It is not intended to be used to query current events, but rather to be used as a Natural Language Processor.</span>
+                        <div
+                            className={style["footer-text-column"]}
+                            id={style.side}
+                        >
+                            <span className={style["footer-notes"]}>
+                                GPT-3.5 Turbo was trained with data up to 2021.
+                                It is not intended to be used to query current
+                                events, but rather to be used as a Natural
+                                Language Processor.
+                            </span>
                         </div>
                     </div>
                 </div>
