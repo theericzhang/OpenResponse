@@ -23,6 +23,14 @@ if (isCurrentEnvironmentAzure) {
     openai = new OpenAIApi(configuration);
 }
 
+const httpMessages = {
+    400: "Bad Request - The server did not understand the request, or the request was invalid.",
+    401: "Unauthorized - Authentication is required to access the requested resource. Check to see if your API keys are correct",
+    403: "Forbidden - The server understood the request, but you do not have permission to access the resource.",
+    404: "Not Found - The requested resource could not be found on the server.",
+    500: "Internal Server Error - An unexpected error occurred on the server.",
+};
+
 export default async function (req, res) {
     if (isCurrentEnvironmentAzure) {
         try {
@@ -43,7 +51,9 @@ export default async function (req, res) {
                 );
                 console.log("fetch failed");
                 res.status(500).json({
-                    error: `There was an error: ${response.statusText}`,
+                    error: `Oops! Something went wrong. ${
+                        httpMessages[response.status]
+                    }`,
                 });
 
                 // If something went wrong, like an api call did not go through because of bad permissions, you will be redirected here
