@@ -11,7 +11,7 @@ export default function StatusIndicator() {
         incedent: "#FF3131",
     };
     return (
-        <div class={style["status-indicator-wrapper"]}>
+        <div className={style["status-indicator-wrapper"]}>
             <span className={style["status-indicator-text"]}>
                 {statuses[0]}
             </span>
@@ -21,7 +21,7 @@ export default function StatusIndicator() {
                 viewBox="0 0 8 8"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class={style["status-indicator-dot"]}
+                className={style["status-indicator-dot"]}
             >
                 <circle cx="4" cy="4" r="4" fill={fillColors["operational"]} />
                 {/* TODO: watch fillColors and change colors accordingly to status of API. */}
