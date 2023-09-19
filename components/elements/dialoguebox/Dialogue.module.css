@@ -101,6 +101,20 @@
     fill: #535353;
 }
 
+.error-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+    width: 90%;
+    margin: 0;
+    min-height: 37px;
+    font-family: Monaco;
+    font-size: 24px;
+    color: red;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+
 .response-text-wrapper {
     display: flex;
     flex-direction: column;

@@ -197,7 +197,9 @@ export default function Dialogue() {
                     {isFetchingResponse ? (
                         <TypingPlaceholder />
                     ) : error ? (
-                        error
+                        <div className={style["error-text-wrapper"]}>
+                            {error}
+                        </div>
                     ) : (
                         <div
                             className={style["response-text-wrapper"]}
